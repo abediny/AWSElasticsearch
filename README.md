@@ -1,5 +1,5 @@
 # AWSElasticsearchBuilding an end to end platform using twitter feed, and sentiment analysis on AWS platform
-Overview
+# Overview
 We are living in the age of big data, advanced analytics, and data science. The trend of “big data growth” has not only triggered tremendous hype and buzz, but more importantly presents enormous challenges, which in turn have brought incredible innovation and economic opportunities. (Cao, 2018) therefor our use is case to empower AWS platform with big data technology to analyse twitter stream live for a specific wonderful time this year. Christmas.! Although it was a technological practice for Big Data engineer and data scientist but by a small tweak this method can be applied to almost any situation and all social media platforms.
 Christmas is the best time of the year. Have a good one and make the most of it! It was a wonderful Christmas evening that we tried to use public twitter stream to analyse how people use ‘Christmas’ word to celebrate these days and send congratulation to each other. In this practice we used node technology installed on AWS EC2, Amazon kinesis Firehose, AWS Lambda and Amazon Elasticsearch and Kibana services. Although we filter out twitter stream and remove any tweet without location therefore polished data will be ready to apply on a map. Below is the one the generic outputs from this practice: (just reminding that the clock was 4:00AM London time)
 
@@ -9,7 +9,7 @@ The work image above shows tweet data on Christmas time when tweet data includes
 •	Sentiment analysis applied into the data before loading to Kibana
 •	Map visualization – whole world selected.
 
-Architecture
+#Architecture
 This process has the following architecture to make nearly real-time process using available tools:
 •	A container device (using NodeJS to provide, the Twitter feed) and trigger data ingestion into Amazon Kinesis Firehose.
 •	Firehose automatically collects and saves data into Amazon S3 default configuration.
@@ -18,7 +18,7 @@ This process has the following architecture to make nearly real-time process usi
 
  
 
-Requirements
+#Requirements
 To create this end to end process, we need an active AWS account and a Twitter active application. For twitter account, we created a  create a new application at https://developer.twitter.com/en/apps  and provide tokens to connect form NodeJS configuration file. There are four pieces of information for tokens which you can see them below: consumer key (API key), consumer secret (API secret), access token, and access token secret. Write down these keys.
  
 
@@ -81,7 +81,7 @@ firehose.json: has been added here
 aws iam create-role --role-name firehose_delivery_role --assume-role-policy-document file://firehose-policy.json
 aws iam put-role-policy --role-name firehose_delivery_role --policy-name firehose-s3-rw --policy-document file://s3-rw-policy.json
 
-Amazon Elasticsearch Service cluster
+#Amazon Elasticsearch Service cluster
 Start by creating an Amazon Elasticsearch Service cluster that will hold your data for near real-time analysis. Elasticsearch Service includes built-in support for Kibana, which is used for visualization on top of Elasticsearch Service.
 1.	Sign in to the Amazon Elasticsearch Service console.
 2.	Choose Create a new domain (or Get Started, if this is your first time in the console).
@@ -104,7 +104,7 @@ Note: This is not a recommended approach and should only be used for this demo. 
 
  
 
-Conclusion
+#Conclusion
 Using AWS technologies is a journey without a final destination. Focusing on business logic is easier while architects think up freely and combine advanced components to response faster and easier to the changing environment. AWS offers an easy way to tie these services together to create a near real-time discovery analytical big data platform. For this post, we analysed the data from twitter at the end of 2018 Christmas time, but this type of platform can be used for a variety of other use cases.
 Feel free to send me your suggestion in case of any interesting business logic.
 What’s Next ?
