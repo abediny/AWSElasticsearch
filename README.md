@@ -106,7 +106,9 @@ Note: This is not a recommended approach and should only be used for this demo. 
 
 # Conclusion
 Using AWS technologies is a journey without a final destination. Focusing on business logic is easier while architects think up freely and combine advanced components to response faster and easier to the changing environment. AWS offers an easy way to tie these services together to create a near real-time discovery analytical big data platform. For this post, we analysed the data from twitter at the end of 2018 Christmas time, but this type of platform can be used for a variety of other use cases.
-Feel free to send me your suggestion in case of any interesting business logic.
+Feel free to send me your suggestion and comments.
+
+
 # What’s Next ?
 Explore this architecture with the powerful EMR
 
