@@ -78,7 +78,8 @@ Follow these steps to create IAM role named “firehose_delivery_role” using A
 firehose.json: has been added here 
 2.	Make sure the configuration is arranging with your own configuration
 3.	Run the following commands:
-aws iam create-role --role-name firehose_delivery_role --assume-role-policy-document file://firehose-policy.json
+
+aws iam create-role --role-name firehose_delivery_role --assume-role-policy-document file://firehose.json
 aws iam put-role-policy --role-name firehose_delivery_role --policy-name firehose-s3-rw --policy-document file://s3-rw-policy.json
 
 # Amazon Elasticsearch Service cluster
